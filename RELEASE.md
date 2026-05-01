@@ -37,7 +37,7 @@ Edit `/home/user/.openclaw/openclaw.json`:
       "accounts": {
         "default": {
           "token": "YOUR_BOT_TOKEN_HERE",
-          "webhookUrl": "https://max.your-domain.ru/max-webhook", // Your external URL to Webhook
+          "webhookUrl": "https://max.your-domain.ru/max-webhook", // Your HTTPS external URL to Webhook
           "webhookPort": 9443,	// Your internal port on OpenClaw
           "webhookPath": "/max-webhook",
           "webhookSecret": "openclaw_max_secret"
@@ -69,11 +69,11 @@ journalctl --user -u openclaw-gateway -n 50 | grep MAX
 
 ### Token
 **Where to get:** MAX Bot settings in MAX Messenger app  
-**Format:** String like `f9LHodD0cOLPOW3W1ihiOTSk...`  
+**Format:** String like `f9L.................`   // 84 symbols
 **Required:** Yes
 
 ### webhookUrl
-**Format:** `https://your-domain.com/max-webhook`  
+**Format:** `https://your-domain.com/max-webhook`  (impotant HTTPS with public SSL)
 **Purpose:** MAX platform sends messages to this URL  
 **Required:** For webhook mode (recommended)
 
@@ -85,7 +85,7 @@ journalctl --user -u openclaw-gateway -n 50 | grep MAX
 ### webhookPath
 **Default:** `/max-webhook`  
 **Purpose:** Path component of webhook URL  
-**Full webhook URL:** `https://domain.com:9443/max-webhook` (port in URL)
+**Full webhook URL:** `https://domain.com:443/max-webhook` (port in URL)
 
 ### webhookSecret
 **Purpose:** Validates incoming webhook requests from MAX  
