@@ -116,9 +116,9 @@ MAX API does NOT provide phone numbers in message payloads. Sender object contai
 4. Restart gateway
 
 ### Current allowFrom
-- **212026292** — Denis
-- **18829994** — Igor  
-- **19031923** — Yulia
+        "000000",   // User01
+        "000000",   // User02
+        "000000"    // User03
 
 ---
 
